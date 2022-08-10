@@ -1,0 +1,725 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0b0b0c;
+}
+
+/*/ //////////FONT////////////*/
+
+h1, h2,p{
+    font-family: taviraj;
+}
+
+h3, h4,h5,h6{
+    font-family: shanti;
+    font-size: 1rem;
+}
+
+/*///////////HEADER////////////*/
+
+.nav-container{
+        position: fixed;
+        z-index: 1;
+        margin: 3px auto;
+        left: 15.4%;
+        right: 15.4%;
+        top: 0%;
+}
+
+.title{
+    color: goldenrod;
+}
+
+header div  {
+    text-align: center; 
+}
+
+
+.buho-logo{
+        opacity: 75%;
+        height: 200px;
+        width: 200px;
+       /* margin-bottom: 1%;*/
+}
+
+  
+
+
+
+/*////////////NAVEGACION //////////////*/
+
+.navegacion{
+    background-color: rgba(0, 0, 0);
+    /*position: fixed;*/
+}
+
+.navegacion ul{
+    list-style: none;   
+}
+
+.menu > li{
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+}
+
+.menu > li > a{
+    font-size: 20px;
+    display: block;
+    padding: 25px 20px;
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: #fffffe;
+    transition: all 0.5s;
+}
+
+
+
+
+
+/*////////////MENU HAMBURGUERGUESA////////////////*/
+
+#btn-menu{
+    display:none;
+}
+
+.back-color{
+    background-color: #000000;
+}
+label img{
+    width: 55px;
+    height: 55px;
+}
+
+header label{
+    display: none;
+    height: 70px;
+    padding: 5px;
+    border-right: 1px solid goldenrod;
+}
+
+header label:hover{
+    cursor: pointer;
+    background-color: rgba(179, 229, 252, .1);
+}
+
+
+
+
+
+/*////////////SUB-MENU////////////////*/
+
+.sub-menu{
+    position: absolute;
+    background-color: #000000 ;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s; 
+}
+
+.sub-menu li a{
+    display: block;
+    padding: 15px;
+    color: goldenrod;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu li:hover .sub-menu{
+    visibility: visible;
+    opacity: 1;
+}
+.sub-menu li a:hover{
+    color: #fffffe;
+    transition: all 0.5s;
+}
+
+
+
+
+
+/*//////////////////SLIDER/////////////////*/
+
+.slider{
+    text-align: center; 
+    justify-content: center;
+    padding: 1%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 10%;
+    padding-top: 10rem;
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slider 20s infinite alternate;
+    animation-timing-function: linear;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider li img{
+    width: 70%;
+}
+
+@keyframes slider{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+@media (max-width: 580px){
+    .slider{
+        margin-top: -15%;
+    }
+}
+
+
+
+
+
+/*//////////SHOP////////////*/
+.shop{
+    display: flex;
+    justify-content: center;
+    margin: 2%;    
+    border-top: 1px  solid  goldenrod;
+}
+
+main section div li{
+    padding: 2%;    
+}
+
+.gif-shop{
+    max-width: 100%;
+}
+
+
+
+
+/*///////CAMPAGNA/////////*/
+.ours{
+    color: rgb(167, 126, 22);   
+    font-size: 24px ;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    border-top: 1px  solid  goldenrod;
+}
+
+.video{
+    width: 100%;
+    height: 500px;
+    margin-top: 2%;
+}
+
+.campaing{
+    text-align: center;
+    font-size: 4rem;
+}
+
+
+
+/*////////////SHOP MENU (GALERIA)//////////////*/
+.galery-container{
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+
+    
+  }
+
+  
+  .item{
+    color: goldenrod;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 rgb(151, 125, 39);
+    transition: all 100ms;
+    position: relative;
+    max-width: 100%;
+  }
+  
+  
+  /*.item::after {
+    content: "";
+    background-color: rgba(179, 229, 252, .1);
+    width: 100%;
+    height: 100%;
+    ////////////////position: absolute;////////////
+    top:0;
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms;
+  }*/
+  
+  .item:hover:after{
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+    background-color: rgba(52, 54, 54, 0.589);
+  }
+  
+  .item-img{
+    max-width: 100%;
+    display: flex;
+    height: 500px;
+    width: 320px;
+  }
+  
+  
+
+
+
+  /*//////////////CONTACTO/////////////////*/
+.contacto{
+    color: goldenrod;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 35px;
+    border-top: 1px  solid  goldenrod;
+}
+
+.contacto a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fffffe;
+    padding: 50px;
+}
+
+.map{
+    max-width: 100%;
+    width: 500px;
+    max-height: 350px;
+    height: 450px;
+    border-radius: 5%;
+}
+/*.map-decoration{
+    border: 3px solid goldenrod;
+    border-radius: 5% ;
+}*/
+
+.rsp-adrres{
+   min-height: 100vh;
+}
+
+.contact-container .form-header .form-title{
+    text-align: center;
+    font-weight: normal;
+    padding: 14px 0;
+}
+
+.form-header .form-title span{
+    color: goldenrod;
+    
+}
+
+.contact-container .form-container{
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 3px;
+}
+
+.form-container .form-label{
+    display: block;
+    color: goldenrod;
+    font-size: 16px;
+    position: relative;
+}
+
+.form-container .form-input, .form-textarea{
+    background-color: rgb(0, 0, 0);
+    outline: none;
+    border-bottom: 2px solid goldenrod;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fffffe;
+}
+.form-container .form-textarea{
+    resize: vertical;
+    max-height: 150px;
+    min-height: 50px;
+}
+
+ .form-container .btn-submit{
+    text-align: center;
+    width: 20%;
+    outline: none;
+    background: goldenrod;
+    font-size: 16px;
+    border: none;
+    color: #fffffe;
+    padding: 15px 0;
+    cursor: pointer;
+    border-radius: 3%;
+}
+
+.btn-center{
+    text-align: center;
+}
+
+
+ .form-container .btn-submit:hover{
+    background: rgb(231, 201, 124);
+    transition: all 0.5s ease;   
+}
+
+
+
+
+
+  /*//////////////FOOTER////////////////*/
+
+/*newsletter*/
+  .newsletter{
+      width: 20%;
+  }
+
+  .newsletter-form{
+      margin-bottom: 2%;
+      margin-top: -10%;
+    }
+
+    .form-div{
+        display: flex;
+  }
+
+  .btn-newsletter{
+    text-align: center;
+    width: 50%;
+    outline: none;
+    background: goldenrod;
+    font-size: 16px;
+    border: none;
+    color: #fffffe;
+    padding: 5px 0;
+    cursor: pointer;
+    border-radius: 3%;
+  }
+
+
+  /*redes*/
+
+.redes a:hover {
+    color: rgb(235, 229, 229);
+}
+
+.redes a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(133, 128, 128);
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+}
+
+.redes a span {
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.redes {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*medios de pagos*/
+  .pay{
+      display: flex;
+      justify-content: center;
+      margin-top: -0.5%;
+      margin-bottom: 2%;
+  }
+  .pay ul li img{
+      width: 5px;
+      height: 5px;
+  }
+  footer section li{
+      margin: 5%;
+  }
+  
+  footer {
+    border-top: 1px  solid  goldenrod;
+    color: #fffffe;
+    background-color: #000000;
+}
+
+ footer{
+    text-align: center;
+    font-size: 20px;
+    padding: 40px 0px;
+    margin: 40px 0px 0px 0px;
+   
+}
+
+footer section{
+    display: flex;
+    justify-content:space-evenly ;
+}
+
+
+
+
+
+/*//////////////////////////////
+////////////////////////////////
+///////////PAGINA RSP//////////
+///////////////////////////////
+/////////////////////////////*/
+
+
+/*//////////// LOGO RESPONSIVE////////////////*/
+@media screen and (max-width: 100000000000000px){
+    .buho-rsp{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+.buho-logo{
+        opacity: 75%;
+        height: 150px;
+        width: 150px;
+       /* margin-bottom: 1%;*/
+       transition: all 500ms;
+    }
+.brand-name{
+        display: none;
+    }
+  }
+
+@media screen and (min-width: 1080px) {
+
+.buho-logo{
+    opacity: 75%;
+    height: 150px;
+    width: 150px;
+   /* margin-bottom: 1%;*/
+}
+}
+
+@media screen and (max-width: 760px) {
+
+.brand-name{
+    display: none;
+}
+.buho-logo{
+    opacity: 75%;
+    height: 100px;
+    width: 100px;
+   /* margin-bottom: 1%;*/
+   transition: all 500ms;
+}
+}
+
+@media screen and (max-width: 580px) {
+    .buho-logo{
+        display: none;
+    }
+
+.buho-rsp{
+    display: block;
+    width: 30%;
+    height: 20%;
+    margin-top: 10%;
+    margin-left: 35%;
+}
+}
+
+
+
+
+/*//////MENU HAMBURGUESA///////*/
+@media (max-width: 580px) {
+    .nav-container{
+        margin-left: -15%;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .btn-menu{
+        margin-top: 0%;
+        background-color: #000000;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    label .buho-abierto{
+        display: none;
+    }
+    header label{
+        display: block;
+    }
+    .menu li{
+        width: 100%;
+    }
+    
+    .navegacion{
+        margin-left: -1000%;
+        transition: all 0.5s;
+        width: 700%;
+    }
+
+    .navegacion li{
+        border-top: 1px solid goldenrod;
+    }
+    #btn-menu:checked ~ .navegacion{
+        margin: 0;
+    }
+    #btn-menu:checked ~ label .buho-abierto{
+        display: block;
+        transition: 1s;
+    }
+
+    #btn-menu:checked ~ label .buho-cerrado{
+        display: none;
+    }
+  }
+
+    /*/////////////////CAMPAGNA//////////*/
+    @media (max-width: 960px){
+        section div h1{
+            font-size: 2.5rem !important;
+        }
+        section div h2{
+            font-size: 1.5rem;
+        }
+        .text-campaing{
+            font-size: 1rem;
+        }
+    }
+
+  /*//////////////SUB MENU RESPONSIVE////////////*/
+
+  @media (max-width: 580px){
+    header li ul{
+        width: 100%;
+    }
+    .sub-menu{
+        background-color: #fffffe;
+    }
+}
+
+
+
+
+
+/*///////////////////SHOP MENU RESPONSIVE//////////////*/
+@media (min-width: 560px) {
+    
+    .galery-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .item-text{
+        padding: 5%;
+      }
+  }
+
+  
+  @media (min-width: 900px) {
+    
+    .galery-container{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .galery-container{
+        width: 95%;
+    }
+    
+  }
+
+  @media (max-width: 960px){
+     .galery-container{
+        width: 70%;
+}    
+  }
+
+  @media (max-width: 560px){
+    .galery-container{
+        width: 50%;
+   }    
+     }
+
+  /*/////////////////CONTACTO RESPONSIVE//////////*/
+
+  @media screen and (max-width: 900px){
+      .contact-container{
+          width: 80%;
+          margin-left: 10.77777%;
+          margin-right: 10.77777%;
+      }
+  }
+
+
+
+  /*///////////////FOOTER RESPONSIVE/////////////*/
+  @media(max-width: 960px){
+    footer section{ 
+        flex-direction: column;
+    }
+    footer .btn-center{
+        margin-top: -10%;
+        margin-bottom: 10%;
+    }
+    footer section div{
+        margin: 4%;
+    }
+    .newsletter{
+        margin-left: 25%;
+        width: 50%;
+        
+  }
+
+  footer div .redes {
+      margin-top: -15%;
+  }
+
+}
